@@ -16,3 +16,4 @@
 * [user roles and permissions](user-roles-and-permissions.md)
 * [api keys](api-keys.md)
 * [faq](faq.md)
+* [workspace administration](workspace-administration.md)
