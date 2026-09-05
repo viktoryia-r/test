@@ -18,7 +18,7 @@ Click **Add to Slack** and approve the permissions.
 {% endstep %}
 
 {% step %}
-### Choose a default channel
+### Choose a default channelььь
 
 Choose a default channel for alerts.
 {% endstep %}
