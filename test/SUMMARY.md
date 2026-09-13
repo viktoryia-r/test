@@ -8,7 +8,7 @@
   * [connect stripe](beacon-docs/connect-stripe.md)
   * [webhooks](beacon-docs/webhooks.md)
   * [quickstart](beacon-docs/quickstart.md)
-  * [README](beacon-docs/readme.md)
+  * [README](beacon-docs/beacon-docs.md)
   * [scheduled reports](beacon-docs/scheduled-reports.md)
   * [connect postgresql](beacon-docs/connect-postgresql.md)
 * [glossary](glossary.md)
