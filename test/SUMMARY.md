@@ -5,7 +5,7 @@
   * [slack notifications](beacon-docs/slack-notifications.md)
   * [connect google sheets](beacon-docs/connect-google-sheets.md)
   * [self hosting](beacon-docs/self-hosting.md)
-  * [connect stripe](beacon-docs/connect-stripe.md)
+  * [Check sync](beacon-docs/connect-stripe.md)
   * [webhooks](beacon-docs/webhooks.md)
   * [quickstart](beacon-docs/quickstart.md)
   * [README](beacon-docs/beacon-docs.md)
