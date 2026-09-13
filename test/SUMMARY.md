@@ -1,7 +1,7 @@
 # Table of contents
 
 * [beacon-docs](README.md)
-  * [release notes](beacon-docs/release-notes.md)
+  * [Release notes](beacon-docs/release-notes.md)
   * [slack notifications](beacon-docs/slack-notifications.md)
   * [connect google sheets](beacon-docs/connect-google-sheets.md)
   * [self hosting](beacon-docs/self-hosting.md)
