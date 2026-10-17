@@ -1,0 +1,93 @@
+/* Timeline from Figma: 2s cohort, played once on load and resting on the final frame. */
+.logo {
+  width: 100%;
+  aspect-ratio: 600.7373 / 115.6367;
+  animation:
+    slide-x 2s both,
+    slide-y 2s both;
+}
+
+.svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.reveal {
+  stroke-dasharray: 1 1;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+}
+
+.letter {
+  animation-duration: 2s;
+  animation-fill-mode: both;
+}
+
+.m { animation-name: reveal-m; }
+.o1 { animation-name: reveal-o1; }
+.v { animation-name: reveal-v; }
+.o2 { animation-name: reveal-o2; }
+.letter.m { animation-name: show-m; }
+.letter.o1 { animation-name: show-o1; }
+.letter.v { animation-name: show-v; }
+.letter.o2 { animation-name: show-o2; }
+
+@keyframes slide-x {
+  0%, 23% { translate: 30.46% 0; animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1); }
+  91.5%, 100% { translate: 0 0; }
+}
+
+@keyframes slide-y {
+  0%, 91.5% { transform: translateY(-170px); animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes reveal-m {
+  0%, 2% { stroke-dashoffset: 1; animation-timing-function: cubic-bezier(0.3, 0, 0.3, 1); }
+  25%, 100% { stroke-dashoffset: 0; }
+}
+
+@keyframes show-m {
+  0%, 2% { opacity: 0; }
+  2.4%, 100% { opacity: 1; }
+}
+
+@keyframes reveal-o1 {
+  0%, 24% { stroke-dashoffset: 1; animation-timing-function: cubic-bezier(0.3, 0, 0.3, 1); }
+  47%, 100% { stroke-dashoffset: 0; }
+}
+
+@keyframes show-o1 {
+  0%, 24% { opacity: 0; }
+  24.4%, 100% { opacity: 1; }
+}
+
+@keyframes reveal-v {
+  0%, 43.5% { stroke-dashoffset: 1; animation-timing-function: cubic-bezier(0.3, 0, 0.3, 1); }
+  68%, 100% { stroke-dashoffset: 0; }
+}
+
+@keyframes show-v {
+  0%, 43.5% { opacity: 0; }
+  43.9%, 100% { opacity: 1; }
+}
+
+@keyframes reveal-o2 {
+  0%, 64% { stroke-dashoffset: 1; animation-timing-function: cubic-bezier(0.3, 0, 0.3, 1); }
+  91.5%, 100% { stroke-dashoffset: 0; }
+}
+
+@keyframes show-o2 {
+  0%, 64% { opacity: 0; }
+  64.4%, 100% { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logo,
+  .reveal,
+  .letter {
+    animation: none;
+  }
+}

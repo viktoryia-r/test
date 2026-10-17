@@ -1,0 +1,360 @@
+/* Layouts from Figma: "14'" frame (≥900px, header row above gallery) and "16'+" frame (≥1728px, sidebar). */
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 96px;
+  padding: 0 16px 24px;
+  background: #000;
+  overflow: clip;
+}
+
+/* Hero */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100svh;
+}
+
+.brand {
+  position: relative;
+  width: min(392px, 100%);
+  container-type: inline-size;
+}
+
+.appIcon {
+  position: absolute;
+  left: 15.56cqw;
+  top: -1.53cqw;
+  width: 68.88cqw;
+  height: auto;
+  max-width: none;
+  pointer-events: none;
+}
+
+.brandText {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5.1cqw;
+  margin-top: 61.22cqw;
+}
+
+.tagline {
+  width: 100%;
+  font-size: 16px;
+  text-align: center;
+  opacity: 0.5;
+}
+
+/* Version blocks */
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+.aside {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+}
+
+.version {
+  font-size: 16px;
+  opacity: 0.5;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  list-style: none;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.linkLabel {
+  flex: 1 1 0;
+  min-width: 0;
+  font-size: 14px;
+  opacity: 0.5;
+  transition: opacity 0.2s ease;
+}
+
+.link:hover .linkLabel,
+.link:focus-visible .linkLabel {
+  opacity: 0.85;
+}
+
+.icon {
+  position: relative;
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border: 0.6px solid #fff;
+  border-radius: 7.15px;
+  overflow: hidden;
+}
+
+.icon img {
+  position: absolute;
+  max-width: none;
+}
+
+.iconTestflight {
+  border-color: rgba(255, 255, 255, 0.37);
+}
+
+.iconTestflight img {
+  left: -5.17%;
+  top: -5.65%;
+  width: 110.34%;
+  height: 111.3%;
+}
+
+.iconFigma img {
+  left: -41.67%;
+  top: -35.42%;
+  width: 166.67%;
+  height: 168.75%;
+}
+
+.iconBrowser img {
+  left: -42.55%;
+  top: -31.91%;
+  width: 165.96%;
+  height: 163.83%;
+}
+
+.arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+}
+
+/* Gallery cards */
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 32px;
+  container-type: size;
+}
+
+.phoneCard {
+  aspect-ratio: 495 / 869;
+  background: #efefef;
+}
+
+.photoCard {
+  aspect-ratio: 974 / 869;
+}
+
+.phone {
+  position: absolute;
+  left: 50%;
+  translate: -50% 0;
+  overflow: hidden;
+}
+
+.phone img {
+  position: absolute;
+  max-width: none;
+}
+
+.phoneV1 {
+  top: 11.28%;
+  height: 78.48%;
+  aspect-ratio: 326 / 682;
+  border-radius: 6.79cqh;
+}
+
+.phoneV1 img {
+  left: -7.8%;
+  top: -4.28%;
+  width: 114.76%;
+  height: 109.2%;
+}
+
+.phoneV2 {
+  top: 11.16%;
+  height: 78.6%;
+  aspect-ratio: 326 / 683;
+  border-radius: 6.67cqh;
+}
+
+.phone .phoneFrame {
+  left: -101.93%;
+  top: -14.2%;
+  width: 302.33%;
+  height: 127.23%;
+}
+
+.phone .phoneScreen {
+  left: 3.07%;
+  top: 1.46%;
+  width: 93.56%;
+  height: 96.93%;
+  object-fit: cover;
+  border-radius: 5.52cqh;
+}
+
+/* Zoomed in to match the phone framing of the Figma still. */
+.videoV1 {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 56% 50%;
+  scale: 1.3;
+}
+
+.photoCover {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.footer {
+  font-size: 16px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.4);
+  opacity: 0.5;
+}
+
+/* 14" layout */
+@media (min-width: 900px) {
+  .page {
+    gap: 180px;
+  }
+
+  .hero {
+    min-height: 0;
+    height: 1000px;
+  }
+
+  .block {
+    gap: 40px;
+  }
+
+  .aside {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 32px;
+  }
+
+  .heading {
+    flex: 0 1 559px;
+  }
+
+  .linkLabel {
+    flex: 0 1 auto;
+    font-size: 16px;
+  }
+
+  .gallery {
+    flex-direction: row;
+    aspect-ratio: 1485 / 869;
+    max-height: 869px;
+  }
+
+  .gallery .phoneCard,
+  .gallery .photoCard {
+    aspect-ratio: auto;
+    height: 100%;
+  }
+
+  .gallery .phoneCard {
+    flex: 495 1 0;
+  }
+
+  .gallery .photoCard {
+    flex: 974 1 0;
+  }
+}
+
+@media (min-width: 1280px) {
+  .linkLabel {
+    white-space: nowrap;
+  }
+}
+
+/* 16"+ layout */
+@media (min-width: 1728px) {
+  .block {
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 16px;
+  }
+
+  .aside {
+    flex: 0 0 320px;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 40px;
+  }
+
+  .heading {
+    flex: none;
+  }
+
+  .links {
+    gap: 20px;
+  }
+
+  .linkLabel {
+    flex: 1 1 0;
+    font-size: 14px;
+    white-space: normal;
+  }
+
+  .gallery {
+    flex: 1 1 0;
+    min-width: 0;
+    height: 869px;
+    aspect-ratio: auto;
+    max-height: none;
+  }
+
+  .gallery .phoneCard {
+    flex: 0 0 490px;
+  }
+
+  .gallery .photoCard {
+    flex: 1 1 0;
+  }
+}
